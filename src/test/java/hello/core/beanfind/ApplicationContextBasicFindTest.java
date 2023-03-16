@@ -24,11 +24,11 @@ public class ApplicationContextBasicFindTest {
     }
 
     @Test
-    @DisplayName("search bean with Type")
+    @DisplayName("search bean by Type")
     void findBeanByType(){
         MemberService memberService = ac.getBean(MemberService.class);
 
-        assertThat(memberService.getClass()).isInstanceOf(MemberService.class);
+        assertThat(memberService).isInstanceOf(MemberService.class);
     }
 
 }
